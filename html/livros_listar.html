@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Listar livros</title>
+	
+	<!-- JQUERY -->
+	<script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>	
+	
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<script src="assets/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<!-- BARRA DE NAVEGAÇÃO -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+		
+				<!-- SEÇÃO LIVROS -->
+				<li class="dropdown active">
+					<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">Livros<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li class="active"><a href="livros_listar.html">Listar</a></li>
+						<li><a href="livros_edicao.html">Cadastrar</a></li>
+					</ul>
+				</li> 
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Logout </a></li>
+			</ul>
+		</div>
+	</nav><br/><br/>
+	<!-- FIM BARRA DE NAVEGAÇÃO -->
+	
+	<!-- Conteudo principal -->
+	<div class="container">
+			<h1>Livros</h1>
+
+			<table class="table table-hover">
+			    <thead>
+			      <tr>
+			        <th>ISBN</th>
+			        <th>Título</th>
+			        <th>Autor</th>
+			        <th width="10%">Opções</th>
+			      </tr>
+			    </thead>
+			    <!-- DADOS -->
+			    <tbody>
+			      	<tr>
+			        	<td>99999999999</td>
+			        	<td>Livro 1</td>
+			        	<td>Autor 1</td>
+			        	<td>
+							<a href="livros_visualizar.html">Visualizar</a>
+			        		<a href="livros_edicao.html">Editar</a>
+			        		<a href="">Excluir</a>
+			        	</td>
+			      	</tr>
+			      	<tr>
+			        	<td>888888888888</td>
+			        	<td>Livro 2</td>
+			        	<td>Autor 2</td>
+			      		<td>
+						  	<a href="livros_visualizar.html">Visualizar</a>
+			        		<a href="livros_edicao.html">Editar</a>
+			        		<a href="">Excluir</a>
+			        	</td>
+			      	</tr>	 
+			    </tbody>
+			    <!-- DADOS [FIM] -->
+			</table>
+	</div>
+</body>
+</html>
