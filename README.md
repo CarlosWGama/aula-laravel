@@ -11,9 +11,3 @@ composer install
 
 ## Nomes das aulas para usar no checkout:
 - inicio
-- controllers
-- view 
-- request
-- session
-- migration
-- model
