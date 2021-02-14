@@ -11,3 +11,4 @@ composer install
 
 ## Nomes das aulas para usar no checkout:
 - inicio
+- rotas
