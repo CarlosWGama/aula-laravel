@@ -17,9 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/login', 'LoginController@logar');
+
+
 Route::group(['prefix' => 'livros'], function () {
-    Route::get('/', function() { echo 'Listar'; })->name('livros.listar');
-    Route::get('/novo',  function() { echo 'Cadastrar'; })->name('livros.novo');
-    Route::get('/editar/{id}',  function() { echo 'Editar'; })->name('livros.editar');
-    Route::get('/visualizar/{id}',  function() { echo 'Visualizar'; })->name('livros.visualizar');
+    Route::get('/', 'LivrosController@listar')->name('livros.listar');
+    Route::get('/novo',  'LivrosController@novo')->name('livros.novo');
+    Route::get('/editar/{id}',  'LivrosController@editar')->name('livros.editar');
+    Route::get('/visualizar/{id}',  'LivrosController@visualizar')->name('livros.visualizar');
 });
