@@ -13,3 +13,4 @@ composer install
 - inicio
 - rotas
 - controllers
+- view1
