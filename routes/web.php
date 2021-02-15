@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', 'LoginController@logar');
+Route::get('/login', 'LoginController@login');
 
 
 Route::group(['prefix' => 'livros'], function () {
