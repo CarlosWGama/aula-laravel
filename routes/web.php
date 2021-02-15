@@ -21,7 +21,9 @@ Route::get('/logout', 'LoginController@logout');
 Route::group(['prefix' => 'livros'], function () {
     Route::get('/', 'LivrosController@listar')->name('livros.listar');
     Route::get('/novo', 'LivrosController@novo')->name('livros.novo');
-    Route::get('/editar/{id}', 'LivrosController@editar')->name('livros.editar');
+    Route::post('/cadastrar', 'LivrosController@cadastrar')->name('livros.cadastrar');
+    Route::get('/edicao/{id}', 'LivrosController@edicao')->name('livros.edicao');
+    Route::post('/editar/{id}', 'LivrosController@editar')->name('livros.editar');
     Route::get('/excluir/{id}', 'LivrosController@excluir')->name('livros.excluir');
     Route::get('/visualizar/{id}', 'LivrosController@visualizar')->name('livros.visualizar');
 });

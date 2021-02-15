@@ -14,3 +14,4 @@ composer install
 - rotas
 - controllers
 - view1
+- view2

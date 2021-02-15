@@ -6,10 +6,23 @@ use Illuminate\Http\Request;
 
 class LivrosController extends Controller {
     
+    /** 
+     * Abre a tela que cadastra um livro 
+     */
     public function novo() {
         return view('livros.cadastro');
     }
 
+    /** 
+     * Salva o livro a ser cadastrado 
+     */
+    public function cadastrar() {
+
+    }
+
+    /** 
+     * Abre a tela que lista os livros 
+     */
     public function listar() {
         $dados['livros'] = [
             ['id' => 1, 'isbn' => '999999999', 'autor' => 'Autor 1', 'titulo' => 'Livro 1'],
@@ -18,7 +31,10 @@ class LivrosController extends Controller {
         return view('livros.listar', $dados);
     }
 
-    public function editar(int $id) {
+    /**
+     * Abre a tela de edição de livros
+     */
+    public function edicao(int $id) {
         $dados = ['livro' => [
                 'id'        => 1,
                 'isbn'      => 23123123123,
@@ -32,6 +48,16 @@ class LivrosController extends Controller {
         return view('livros.edicao', $dados);
     }
 
+    /**
+     * Salva o livro a ser editado
+     */
+    public function editar(int $id) {
+
+    }
+
+    /**
+     * Abre a tela de visualização de livros
+     */
     public function visualizar(int $id) {
         $dados = ['livro' => [
                     'id'        => 1,
@@ -43,6 +69,9 @@ class LivrosController extends Controller {
         return view('livros.visualizar', $dados);
     }
 
+    /**
+     * Exclui um livro
+     */
     public function excluir(int $id) {
      
     }
