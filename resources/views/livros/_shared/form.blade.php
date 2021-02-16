@@ -34,3 +34,8 @@
     <textarea class="form-control" id="campo-resumo" name="resumo"></textarea>
 </div>
     
+<!-- CAPA -->
+<div class="form-group">
+    <label>Capa:</label>
+    <input type="file" class="form-control" name="capa">
+</div>

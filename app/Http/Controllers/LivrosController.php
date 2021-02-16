@@ -16,8 +16,13 @@ class LivrosController extends Controller {
     /** 
      * Salva o livro a ser cadastrado 
      */
-    public function cadastrar() {
+    public function cadastrar(Request $request) {
 
+        //Faz upload de arquivo
+        if ($request->has('capa')) {
+            $nomeArquivo = 'livro_1.'.$request->capa->extension();
+            $request->capa->storeAs('public/livros/', $nomeArquivo);
+        }
     }
 
     /** 
@@ -51,8 +56,13 @@ class LivrosController extends Controller {
     /**
      * Salva o livro a ser editado
      */
-    public function editar(int $id) {
+    public function editar(Request $request, int $id) {
 
+        //Faz upload de arquivo
+        if ($request->has('capa')) {
+            $nomeArquivo = 'livro_1.'.$request->capa->extension();
+            $request->capa->storeAs('public/livros/', $nomeArquivo);
+        }
     }
 
     /**
@@ -63,7 +73,8 @@ class LivrosController extends Controller {
                     'id'        => 1,
                     'titulo'    => 'Titulo 1',
                     'autor'     => 'Autor 1',
-                    'resumo'    => 'Bla bla bla bla bla bla'
+                    'resumo'    => 'Bla bla bla bla bla bla',
+                    'capa'      => 'https://picsum.photos/200/300'
                 ]
         ];
         return view('livros.visualizar', $dados);

@@ -2,14 +2,29 @@
 	
 @section('titulo', 'Visualizar - ' . $livro['titulo'])
 
+@push('css')
+	<style>
+		#informacoes-livro {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	</style>
+@endpush
+
 @section('conteudo_principal')
 	<div class="jumbotron">
 
 		<!-- TITULO -->
-		<div class="page-header">
-			<h1>{{$livro['titulo']}}</h1>
-			<span class="label label-primary">{{$livro['autor']}}</span>
-			<span class="label label-default">Terror</span>
+		<div id="informacoes-livro" class="page-header">
+			<div>
+				<h1>{{$livro['titulo']}}</h1>
+				<span class="label label-primary">{{$livro['autor']}}</span>
+				<span class="label label-default">Terror</span>
+			</div>
+			@if(isset($livro['capa']))
+			<img src="{{$livro['capa']}}" />
+			@endif
 		</div>
 
 		<!-- DESCRICAO -->

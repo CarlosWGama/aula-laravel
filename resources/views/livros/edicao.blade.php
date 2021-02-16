@@ -13,7 +13,7 @@
 		<!-- [FIM] ERRO -->
 
 
-		<form action="{{route('livros.editar', ['id' => $livro['id']])}}" method="post">
+		<form action="{{route('livros.editar', ['id' => $livro['id']])}}" method="post" enctype="multipart/form-data">
 			@include('livros._shared.form')
 			<button type="submit" class="btn btn-default">Editar</button>				
 		</form>

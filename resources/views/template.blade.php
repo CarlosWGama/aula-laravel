@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
 	<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+
+	@stack('css')
 </head>
 <body>
 
