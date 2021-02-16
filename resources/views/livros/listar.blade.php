@@ -4,6 +4,10 @@
 
 @section('conteudo_principal')
 			<h1>Livros</h1>
+			
+			@if(session('sucesso'))
+			<p class="alert alert-success">{{session('sucesso')}}</p>
+			@endif
 
 			<table class="table table-hover">
 			    <thead>

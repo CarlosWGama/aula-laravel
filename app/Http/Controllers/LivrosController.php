@@ -18,11 +18,23 @@ class LivrosController extends Controller {
      */
     public function cadastrar(Request $request) {
 
+        //Valida
+        $request->validate([
+            'isbn'  => 'required|integer',
+            'titulo'=> 'required',
+            'autor' => 'required',
+            'resumo'=> 'required',
+            'capa'  => 'required|image'
+        ]);
+
         //Faz upload de arquivo
         if ($request->has('capa')) {
             $nomeArquivo = 'livro_1.'.$request->capa->extension();
             $request->capa->storeAs('public/livros/', $nomeArquivo);
         }
+
+        return redirect()->route('livros.listar')->with('sucesso', 'Livro cadastrado com sucesso');
+
     }
 
     /** 
@@ -58,11 +70,22 @@ class LivrosController extends Controller {
      */
     public function editar(Request $request, int $id) {
 
+        $request->validate([
+            'isbn'  => 'required|integer',
+            'titulo'=> 'required',
+            'autor' => 'required',
+            'resumo'=> 'required',
+            'capa'  => 'image'
+        ]);
+
         //Faz upload de arquivo
         if ($request->has('capa')) {
             $nomeArquivo = 'livro_1.'.$request->capa->extension();
             $request->capa->storeAs('public/livros/', $nomeArquivo);
         }
+
+        return redirect()->route('livros.listar')->with('sucesso', 'Livro atualizado com sucesso');
+
     }
 
     /**
@@ -85,5 +108,7 @@ class LivrosController extends Controller {
      */
     public function excluir(int $id) {
      
+        return redirect()->route('livros.listar')->with('sucesso', 'Livro excluído com sucesso');
+
     }
 }
