@@ -17,3 +17,4 @@ composer install
 - view2
 - request
 - validation
+- session

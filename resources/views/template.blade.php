@@ -31,7 +31,7 @@
 				</li> 
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="{{route('login')}}"><span class="glyphicon glyphicon-log-in"></span> Logout </a></li>
+				<li><a href="{{route('logout')}}"><span class="glyphicon glyphicon-log-in"></span> Logout </a></li>
 			</ul>
 		</div>
 	</nav><br/><br/>

@@ -17,15 +17,17 @@ class LoginController extends Controller {
      * Tenta realizar o login
      */
     public function logar(Request $request) {
-        if ($request->email == 'teste@teste.com' && $request->senha == '123456')
+        if ($request->email == 'teste@teste.com' && $request->senha == '123456') {
+            session(['usuario' => 'Carlos']);
             return redirect()->route('livros.listar');
-        return redirect()->back()->with('erro', 'Login ou senha incorreta');
+        } return redirect()->back()->with('erro', 'Login ou senha incorreta');
     }
 
     /**
      * Realiza o logout
      */
-    public function logout() {
+    public function logout(Request $request) {
+        $request->session()->flush();
         return view('login');
     }
 }

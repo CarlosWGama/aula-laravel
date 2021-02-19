@@ -4,7 +4,8 @@
 
 @section('conteudo_principal')
 			<h1>Livros</h1>
-			
+			<h2>Olá {{session('usuario')}}</h2>
+
 			@if(session('sucesso'))
 			<p class="alert alert-success">{{session('sucesso')}}</p>
 			@endif
