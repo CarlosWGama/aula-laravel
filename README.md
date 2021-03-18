@@ -18,3 +18,4 @@ composer install
 - request
 - validation
 - session
+- migration
