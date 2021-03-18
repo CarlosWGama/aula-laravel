@@ -19,3 +19,4 @@ composer install
 - validation
 - session
 - migration
+- model1
