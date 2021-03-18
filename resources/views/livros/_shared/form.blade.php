@@ -19,7 +19,7 @@
 <!-- CATEGORIA -->
 <div class="form-group">
     <label for="campo-categoria">Categoria:</label>
-    <select class="form-control" name="categoria" id="campo-categoria">
+    <select class="form-control" name="categoria_id" id="campo-categoria">
         <option value="1">Terror</option>
         <option value="2">Drama</option>
         <option value="3">Romance</option>

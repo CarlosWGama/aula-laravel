@@ -19,6 +19,7 @@ class CriandoTabelaLivros extends Migration
             $table->string('autor');
         	$table->integer('categoria_id');
             $table->text('resumo');
+            $table->string('capa')->nullable();
             $table->timestamps();
         });
     }
