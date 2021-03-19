@@ -9,4 +9,8 @@ class Livro extends Model {
     use HasFactory;
 
     protected $guarded = [];
+
+    public function categoria() {
+        return $this->belongsTo('App\Models\Categoria');
+    }
 }

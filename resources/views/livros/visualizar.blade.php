@@ -20,10 +20,10 @@
 			<div>
 				<h1>{{$livro['titulo']}}</h1>
 				<span class="label label-primary">{{$livro['autor']}}</span>
-				<span class="label label-default">Terror</span>
+				<span class="label label-default">{{$livro['categoria']['categoria']}}</span>
 			</div>
 			@if(isset($livro['capa']))
-			<img src="{{$livro['capa']}}" />
+			<img src="{{asset('/storage/livros/'.$livro['capa'])}}" />
 			@endif
 		</div>
 

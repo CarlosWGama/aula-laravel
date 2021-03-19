@@ -9,4 +9,8 @@ class Categoria extends Model {
     use HasFactory;
 
     protected $fillable = ['categoria'];
+
+    public function livros() {
+        return $this->hasMany('App\Models\Livro');
+    }
 }

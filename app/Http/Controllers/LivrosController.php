@@ -35,6 +35,7 @@ class LivrosController extends Controller {
         if ($request->has('capa')) {
             $nomeArquivo = 'livro_'.$livro->id.'.'.$request->capa->extension();
             $request->capa->storeAs('public/livros/', $nomeArquivo);
+            $livro->capa = $nomeArquivo;
         }
 
         return redirect()->route('livros.listar')->with('sucesso', 'Livro cadastrado com sucesso');
@@ -80,6 +81,7 @@ class LivrosController extends Controller {
         if ($request->has('capa')) {
             $nomeArquivo = 'livro_'.$id.'.'.$request->capa->extension();
             $request->capa->storeAs('public/livros/', $nomeArquivo);
+            Livro::where('id', $id)->update(['capa' => $nomeArquivo]);
         }
 
         return redirect()->route('livros.listar')->with('sucesso', 'Livro atualizado com sucesso');

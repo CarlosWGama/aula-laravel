@@ -21,3 +21,4 @@ composer install
 - migration
 - model1
 - model2
+- joins
