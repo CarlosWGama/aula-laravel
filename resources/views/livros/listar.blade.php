@@ -10,6 +10,14 @@
 			<p class="alert alert-success">{{session('sucesso')}}</p>
 			@endif
 
+			<form action="{{route('livros.listar')}}" method="get">
+				<div class="form-group">
+					<label for="campo-isbn">Buscar livro:</label>
+					<input type="number" class="form-control" name="titulo" id="campo-isbn">
+				</div>
+				<button type="submit" class="btn btn-default btn-success">Buscar</button>
+			</form>
+
 			<table class="table table-hover">
 			    <thead>
 			      <tr>
