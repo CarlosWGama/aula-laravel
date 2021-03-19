@@ -46,10 +46,13 @@ class LivrosController extends Controller {
      * Abre a tela que lista os livros 
      */
     public function listar(Request $request) {
+        //Só para criar a variavel que vamos montar a query sem nada ainda
+        $livroModel = Livro::query();
+        //adiciona a condição caso exista titulo
         if ($request->has('titulo'))
-            $dados['livros'] = Livro::where('titulo', 'like', '%'.$request->titulo.'%')->get();
-        else
-            $dados['livros'] = Livro::all();
+            $livroModel = $livroModel->where('titulo', 'like', '%'.$request->titulo.'%');
+        
+        $dados['livros'] = $livroModel->simplePaginate(1)->withQueryString();
         $dados['titulo'] = $request->titulo;
         return view('livros.listar', $dados);
     }

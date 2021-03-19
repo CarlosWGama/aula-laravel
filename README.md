@@ -22,3 +22,4 @@ composer install
 - model1
 - model2
 - joins
+- extras
