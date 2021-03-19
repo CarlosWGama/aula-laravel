@@ -11,7 +11,8 @@ class LivrosController extends Controller {
      * Abre a tela que cadastra um livro 
      */
     public function novo() {
-        return view('livros.cadastro');
+        $dados['Livro'] = new Livro;
+        return view('livros.cadastro', $dados);
     }
 
     /** 
