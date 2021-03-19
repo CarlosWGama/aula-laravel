@@ -13,7 +13,7 @@
 <!-- AUTOR -->
 <div class="form-group">
     <label for="campo-email">Autor:</label>
-    <input type="email" class="form-control" name="autor" id="campo-email" value="{{old('autor', $livro['autor'])}}">
+    <input type="text" class="form-control" name="autor" id="campo-email" value="{{old('autor', $livro['autor'])}}">
 </div>
 
 <!-- CATEGORIA -->
