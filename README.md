@@ -20,3 +20,4 @@ composer install
 - session
 - migration
 - model1
+- model2
